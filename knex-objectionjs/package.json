@@ -1,0 +1,33 @@
+{
+  "name": "knex-objectionjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js",
+
+
+    "db:migrate:make": "npx knex migrate:make init --migrations-directory db/migrations",
+    "db:seed": "npx knex seed:run --knexfile=./db/knexfile.js",
+    "db:seed:create": "npx knex seed:make new-seed --knexfile ./db/knexfile.js",
+    "db:migrate": "npx knex migrate:latest --knexfile ./db/knexfile.js",
+    "db:down": "npx knex migrate:down --knexfile ./db/knexfile.js",
+
+
+
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.21.21",
+    "objection": "^2.2.15",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
